@@ -7,7 +7,7 @@
  SMMU_INFO: Number of SMMU CTRL       :    0 
  Peripheral: Num of USB controllers   :    1 
  Peripheral: Num of SATA controllers  :    0 
- Peripheral: Num of UART controllers  :    0 
+ Peripheral: Num of UART controllers  :    1 
    1 : Check for number of PE            : Result:  PASS 
    2 : Check for SIMD extensions         : Result:  PASS 
    3 : Check for 16-bit ASID support     : Result:  PASS 
@@ -80,8 +80,8 @@
        WARN: USB CTRL ECAM access failed 0x0  
        Re-checking USB CTRL using PciIo protocol       : Result:  PASS 
   82 : Check SATA CTRL Interface via PCIe: Result:  -SKIPPED- 1 
-  83 : Check SBSA UART register offsets  
-        No UART defined by Platform      : Result:  -SKIPPED- 1 
+  83 : Check SBSA UART register offsets  : Result:  PASS 
+  84 : Check GENERIC UART Interrupt      : Result:  PASS 
   85 : Memory Access to Un-Populated addr: Result:  -SKIPPED- 1 
 
     One or more Peripheral tests have failed...
@@ -101,5 +101,5 @@
       One or more SMMU tests have failed...  
 
      ------------------------------------------------------- 
-     Total Tests run  =   47;  Tests Passed  =   24  Tests Failed =    6
+     Total Tests run  =   48;  Tests Passed  =   26  Tests Failed =    6
      --------------------------------------------------------- 

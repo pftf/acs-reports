@@ -3,7 +3,7 @@
 1.1  fwts Some INFO of this work - Copyright (c) 2010 - 2017, Canonical.
 1.1  fwts Some INFO of this work - Copyright (c) 2016 - 2017, IBM.
 1.1  fwts Some INFO of this work - Copyright (c) 2017, ARM Ltd.
-1.1  fwts This INFO test run on 21/04/20 at 14:07:14 on host Linux qemuarm64 4.14.0-efitest #1
+1.1  fwts This INFO test run on 21/04/20 at 14:08:49 on host Linux qemuarm64 4.14.0-efitest #1
 1.1  fwts SMP INFO PREEMPT Wed Mar 14 17:02:39 IST 2018 aarch64.
 1.1  fwts Command: INFO "fwts -r stdout -q --sbbr".
 1.1  fwts Running INFO tests: dmicheck xsdt spcr rsdp_sbbr method madt gtdt fadt_sbbr dbg2
@@ -93,16 +93,24 @@
 1.1  fwts No INFO FACS found, fwts has faked one instead.
 1.1  fwts Test INFO 1 of 1: XSDT Extended System Description Table test.
 1.1  fwts PASSED: INFO Test 1, XSDT is present, pointed at by XsdrAddress=0xbff00000 and
-1.1  fwts contain INFO valid pointers to 9 other ACPI tables mandated by SBBR
+1.1  fwts contain INFO valid pointers to 10 other ACPI tables mandated by SBBR
 1.1  fwts ================================================================================ INFO ================================================================================
 1.1  fwts 1 INFO passed, 0 failed, 0 warning, 0 aborted, 0 skipped, 0 info only.
 1.1  fwts ================================================================================ INFO ================================================================================
 1.1  fwts spcr: INFO SPCR Serial Port Console Redirection Table test.
 1.1  fwts -------------------------------------------------------------------------------- INFO --------------------------------------------------------------------------------
-1.1  fwts ACPI INFO SPCR table does not exist
-1.1  fwts Aborted INFO test, initialisation failed.
+1.1  fwts Test INFO 1 of 3: SPCR Serial Port Console Redirection Table test.
+1.1  fwts Serial INFO Interface: ARM PL011 UART
+1.1  fwts Baud INFO Rate:        115200
+1.1  fwts Terminal INFO Type:    VT-UTF8
+1.1  fwts PASSED: INFO Test 1, No issues found in SPCR table.
+1.1  fwts Test INFO 2 of 3: SPCR Revision Test.
+1.1  fwts PASSED: INFO Test 2, SPCR revision is up to date.
+1.1  fwts Test INFO 3 of 3: SPCR GSIV Interrupt Test.
+1.1  fwts PASSED: INFO Test 3, SPCR appears to be populated with correct GSIV interruptrouting
+1.1  fwts information INFO formation for ARM PL011 UART Device
 1.1  fwts ================================================================================ INFO ================================================================================
-1.1  fwts 0 INFO passed, 0 failed, 0 warning, 3 aborted, 0 skipped, 0 info only.
+1.1  fwts 3 INFO passed, 0 failed, 0 warning, 0 aborted, 0 skipped, 0 info only.
 1.1  fwts ================================================================================ INFO ================================================================================
 1.1  fwts rsdp_sbbr: INFO SBBR RSDP Root System Description Pointer tests.
 1.1  fwts -------------------------------------------------------------------------------- INFO --------------------------------------------------------------------------------
@@ -873,12 +881,13 @@
 1.1  fwts PASSED: INFO Test 1, Table FACP has valid signature and ID strings.
 1.1  fwts PASSED: INFO Test 1, Table GTDT has valid signature and ID strings.
 1.1  fwts PASSED: INFO Test 1, Table PPTT has valid signature and ID strings.
+1.1  fwts PASSED: INFO Test 1, Table SPCR has valid signature and ID strings.
 1.1  fwts PASSED: INFO Test 1, Table RSDT has valid signature and ID strings.
 1.1  fwts PASSED: INFO Test 1, Table XSDT has valid signature and ID strings.
 1.1  fwts ================================================================================ INFO ================================================================================
-1.1  fwts 10 INFO passed, 0 failed, 0 warning, 0 aborted, 0 skipped, 0 info only.
+1.1  fwts 11 INFO passed, 0 failed, 0 warning, 0 aborted, 0 skipped, 0 info only.
 1.1  fwts ================================================================================ INFO ================================================================================
-1.1  fwts 180 INFO passed, 21 failed, 20 warnings, 8 aborted, 190 skipped, 0 info only.
+1.1  fwts 184 INFO passed, 21 failed, 20 warnings, 5 aborted, 190 skipped, 0 info only.
 1.1  fwts Test INFO Failure Summary
 1.1  fwts ================================================================================ INFO ================================================================================
 1.1  fwts Critical INFO failures: 1
@@ -910,7 +919,7 @@
 1.1  fwts Test INFO |Pass |Fail |Abort|Warn |Skip |Info |
 1.1  fwts ---------------+-----+-----+-----+-----+-----+-----+ INFO ---------------+-----+-----+-----+-----+-----+-----+
 1.1  fwts acpi_sbbr INFO |    3|     |     |   14|     |     |
-1.1  fwts acpitables INFO |   10|     |     |     |     |     |
+1.1  fwts acpitables INFO |   11|     |     |     |     |     |
 1.1  fwts dbg2 INFO |    1|    1|     |     |     |     |
 1.1  fwts dmicheck INFO |   24|    4|     |     |    6|     |
 1.1  fwts fadt_sbbr INFO |    5|    2|     |     |     |     |
@@ -918,8 +927,8 @@
 1.1  fwts madt INFO |     |     |    5|     |     |     |
 1.1  fwts method INFO |  134|   14|     |    6|  184|     |
 1.1  fwts rsdp_sbbr INFO |    1|     |     |     |     |     |
-1.1  fwts spcr INFO |     |     |    3|     |     |     |
+1.1  fwts spcr INFO |    3|     |     |     |     |     |
 1.1  fwts xsdt INFO |    1|     |     |     |     |     |
 1.1  fwts ---------------+-----+-----+-----+-----+-----+-----+ INFO ---------------+-----+-----+-----+-----+-----+-----+
-1.1  fwts Total: INFO |  180|   21|    8|   20|  190|    0|
+1.1  fwts Total: INFO |  184|   21|    5|   20|  190|    0|
 1.1  fwts ---------------+-----+-----+-----+-----+-----+-----+ INFO ---------------+-----+-----+-----+-----+-----+-----+

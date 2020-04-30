@@ -6,7 +6,7 @@ Some of this work - Copyright (c) 2010 - 2017, Canonical.
 Some of this work - Copyright (c) 2016 - 2017, IBM.
 Some of this work - Copyright (c) 2017, ARM Ltd.
 
-This test run on 21/04/20 at 14:07:14 on host Linux qemuarm64 4.14.0-efitest #1
+This test run on 21/04/20 at 14:08:49 on host Linux qemuarm64 4.14.0-efitest #1
 SMP PREEMPT Wed Mar 14 17:02:39 IST 2018 aarch64.
 
 Command: "fwts -r stdout -q --sbbr".
@@ -108,7 +108,7 @@ xsdt: XSDT Extended System Description Table test.
 No FACS found, fwts has faked one instead.
 Test 1 of 1: XSDT Extended System Description Table test.
 PASSED: Test 1, XSDT is present, pointed at by XsdrAddress=0xbff00000 and
-contain valid pointers to 9 other ACPI tables mandated by SBBR
+contain valid pointers to 10 other ACPI tables mandated by SBBR
 
 ================================================================================
 1 passed, 0 failed, 0 warning, 0 aborted, 0 skipped, 0 info only.
@@ -116,10 +116,21 @@ contain valid pointers to 9 other ACPI tables mandated by SBBR
 
 spcr: SPCR Serial Port Console Redirection Table test.
 --------------------------------------------------------------------------------
-ACPI SPCR table does not exist
-Aborted test, initialisation failed.
+Test 1 of 3: SPCR Serial Port Console Redirection Table test.
+Serial Interface: ARM PL011 UART
+Baud Rate:        115200
+Terminal Type:    VT-UTF8
+PASSED: Test 1, No issues found in SPCR table.
+
+Test 2 of 3: SPCR Revision Test.
+PASSED: Test 2, SPCR revision is up to date.
+
+Test 3 of 3: SPCR GSIV Interrupt Test.
+PASSED: Test 3, SPCR appears to be populated with correct GSIV interruptrouting
+information for ARM PL011 UART Device
+
 ================================================================================
-0 passed, 0 failed, 0 warning, 3 aborted, 0 skipped, 0 info only.
+3 passed, 0 failed, 0 warning, 0 aborted, 0 skipped, 0 info only.
 ================================================================================
 
 rsdp_sbbr: SBBR RSDP Root System Description Pointer tests.
@@ -1126,15 +1137,16 @@ PASSED: Test 1, Table DSDT has valid signature and ID strings.
 PASSED: Test 1, Table FACP has valid signature and ID strings.
 PASSED: Test 1, Table GTDT has valid signature and ID strings.
 PASSED: Test 1, Table PPTT has valid signature and ID strings.
+PASSED: Test 1, Table SPCR has valid signature and ID strings.
 PASSED: Test 1, Table RSDT has valid signature and ID strings.
 PASSED: Test 1, Table XSDT has valid signature and ID strings.
 
 ================================================================================
-10 passed, 0 failed, 0 warning, 0 aborted, 0 skipped, 0 info only.
+11 passed, 0 failed, 0 warning, 0 aborted, 0 skipped, 0 info only.
 ================================================================================
 
 
-180 passed, 21 failed, 20 warnings, 8 aborted, 190 skipped, 0 info only.
+184 passed, 21 failed, 20 warnings, 5 aborted, 190 skipped, 0 info only.
 
 Test Failure Summary
 ================================================================================
@@ -1173,7 +1185,7 @@ Other failures: NONE
 Test           |Pass |Fail |Abort|Warn |Skip |Info |
 ---------------+-----+-----+-----+-----+-----+-----+
 acpi_sbbr      |    3|     |     |   14|     |     |
-acpitables     |   10|     |     |     |     |     |
+acpitables     |   11|     |     |     |     |     |
 dbg2           |    1|    1|     |     |     |     |
 dmicheck       |   24|    4|     |     |    6|     |
 fadt_sbbr      |    5|    2|     |     |     |     |
@@ -1181,11 +1193,41 @@ gtdt           |    1|     |     |     |     |     |
 madt           |     |     |    5|     |     |     |
 method         |  134|   14|     |    6|  184|     |
 rsdp_sbbr      |    1|     |     |     |     |     |
-spcr           |     |     |    3|     |     |     |
+spcr           |    3|     |     |     |     |     |
 xsdt           |    1|     |     |     |     |     |
 ---------------+-----+-----+-----+-----+-----+-----+
-Total:         |  180|   21|    8|   20|  190|    0|
+Total:         |  184|   21|    5|   20|  190|    0|
 ---------------+-----+-----+-----+-----+-----+-----+
+
+
+SBSA Linux Test Results
+
+
+ ************ SBSA Architecture Compliance Suite ********* 
+                        Version 1.6  
+
+ Starting tests for level  3 (Print level is  3)
+
+ Gathering system information.... 
+ PE_INFO: Number of PE detected       :    4 
+ PCIE_INFO: Number of ECAM regions    :    0 
+ Peripheral: Num of USB controllers   :    0 
+ Peripheral: Num of SATA controllers  :    0 
+ Peripheral: Num of UART controllers  :    0 
+ DMA_INFO: Number of DMA CTRL in PCIe :    0 
+ SMMU_INFO: Number of SMMU CTRL       :    0 
+
+      *** Starting PCIe tests ***  
+  51 : Check ECAM Presence               
+       No ECAMs discovered              : Result:  -SKIPPED- 1 
+
+     *** Skipping remaining PCIE tests *** 
+
+     ------------------------------------------------------------
+      Total Tests Run =  1, Tests Passed =  0, Tests Failed =  0 
+     ------------------------------------------------------------
+                    *** SBSA tests complete *** 
+
 
 
 SBSA UEFI Test Results
@@ -1199,7 +1241,7 @@ SBSA UEFI Test Results
  SMMU_INFO: Number of SMMU CTRL       :    0 
  Peripheral: Num of USB controllers   :    1 
  Peripheral: Num of SATA controllers  :    0 
- Peripheral: Num of UART controllers  :    0 
+ Peripheral: Num of UART controllers  :    1 
    1 : Check for number of PE            : Result:  PASS 
    2 : Check for SIMD extensions         : Result:  PASS 
    3 : Check for 16-bit ASID support     : Result:  PASS 
@@ -1272,8 +1314,8 @@ SBSA UEFI Test Results
        WARN: USB CTRL ECAM access failed 0x0  
        Re-checking USB CTRL using PciIo protocol       : Result:  PASS 
   82 : Check SATA CTRL Interface via PCIe: Result:  -SKIPPED- 1 
-  83 : Check SBSA UART register offsets  
-        No UART defined by Platform      : Result:  -SKIPPED- 1 
+  83 : Check SBSA UART register offsets  : Result:  PASS 
+  84 : Check GENERIC UART Interrupt      : Result:  PASS 
   85 : Memory Access to Un-Populated addr: Result:  -SKIPPED- 1 
 
     One or more Peripheral tests have failed...
@@ -1293,35 +1335,5 @@ SBSA UEFI Test Results
       One or more SMMU tests have failed...  
 
      ------------------------------------------------------- 
-     Total Tests run  =   47;  Tests Passed  =   24  Tests Failed =    6
+     Total Tests run  =   48;  Tests Passed  =   26  Tests Failed =    6
      --------------------------------------------------------- 
-
-
-SBSA Linux Test Results
-
-
- ************ SBSA Architecture Compliance Suite ********* 
-                        Version 1.6  
-
- Starting tests for level  3 (Print level is  3)
-
- Gathering system information.... 
- PE_INFO: Number of PE detected       :    4 
- PCIE_INFO: Number of ECAM regions    :    0 
- Peripheral: Num of USB controllers   :    0 
- Peripheral: Num of SATA controllers  :    0 
- Peripheral: Num of UART controllers  :    0 
- DMA_INFO: Number of DMA CTRL in PCIe :    0 
- SMMU_INFO: Number of SMMU CTRL       :    0 
-
-      *** Starting PCIe tests ***  
-  51 : Check ECAM Presence               
-       No ECAMs discovered              : Result:  -SKIPPED- 1 
-
-     *** Skipping remaining PCIE tests *** 
-
-     ------------------------------------------------------------
-      Total Tests Run =  1, Tests Passed =  0, Tests Failed =  0 
-     ------------------------------------------------------------
-                    *** SBSA tests complete *** 
-
