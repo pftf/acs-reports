@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Linux UEFI Validation Distribution 2.2  </title> 
+<style>
+/*  Copyright (C) 2014 Intel Corporation; author Ricardo Neri
+
+A collection of styles to format HTML components in the LUV
+test results */
+
+body {
+	font-family:arial,sans-serif
+}
+
+div.testsuite, div.testcase_info {
+        margin-left: 50px;
+        display: none;
+        }
+
+div.testcase, div.inline {
+        display:block;
+        }
+
+.failed {
+	color: red;
+}
+
+.passed {
+	color: green;
+}
+
+.skipped, .warning {
+	color: orange;
+}
+</style>
+<script type="text/javascript">
+/**
+ * Copyright 2016 Intel Corporation; author Ricardo Neri
+ *
+ * A collection of scripts to manipulate HTML content
+ */
+
+/**
+ * Toggle the style.display setting of an element whose ID is 'content'+id
+ * between 'block' and 'none'. Also, toggle the innerHTML of an element
+ * whose ID is 'control'+id between '[-]' and '[+]'.
+ *
+ * This function is to be used in anchor link with ID control_id to show/
+ * hide an element with ID content_id.
+ *
+ * @param {string} id
+ */
+function toggle(id){
+    var e = document.getElementById('content_'+id);
+    var c = document.getElementById('control_'+id);
+    /* for IE */
+    var style = e.currentStyle;
+
+    if (!style)
+        /* for the rest of the of browsers */
+        style = window.getComputedStyle(e);
+
+    if (style.display == 'none') {
+        e.style.display = 'block';
+        c.innerHTML = "[-]";
+    } else {
+        e.style.display = 'none';
+       c.innerHTML = "[+]"
+    }
+}
+</script>
+</head>
+<body>
+    Linux UEFI Validation Distribution 2.2 
+
+    Date and time of the system : 2020-04-21--14-07-14
+
+    System:  x 4
+
+    Test results summary:
+
+<div id="Results" class="">
+<a id="control_Results" href="#" onClick="toggle('Results');return false;">[+]</a><span class="">Results</span>
+<div id="content_Results" class="testsuite">
+
+</div> <!--content_---------------+-----+-----+-----+-----+-----+-----+-->
+</div> <!-----------------+-----+-----+-----+-----+-----+-----+-->
+<div class="inline">
+<br>
+Ran 1 testsuites and 0 unittests, 0 passes, 0 fails, 0 skipped, 0 warnings.<br>
+</div>
+</body>
+</html>
