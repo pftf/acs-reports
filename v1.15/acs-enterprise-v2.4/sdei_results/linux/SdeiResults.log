@@ -1,0 +1,17 @@
+
+ ************ SDEI Architecture Compliance Suite ********* 
+                        Version 1.0  
+
+ Starting tests for Print level is  3)
+
+
+        GIC_INFO: Number of GICD             :    1
+        GIC_INFO: Number of ITS              :    0
+        PE_INFO: Number of PE detected       :    4
+        EVT_INFO: No hardware error event found
+        TIMER_INFO: Number of system timers  :    0
+        SDEI entry not found in ACPI table
+        SDEI initialization failed
+        SDEI Initialization failed
+                    *** SDEI tests complete *** 
+
