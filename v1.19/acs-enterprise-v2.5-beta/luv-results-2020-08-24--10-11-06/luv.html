@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Linux UEFI Validation Distribution 2.3  </title> 
+<style>
+/*  Copyright (C) 2014 Intel Corporation; author Ricardo Neri
+
+A collection of styles to format HTML components in the LUV
+test results */
+
+body {
+	font-family:arial,sans-serif
+}
+
+div.testsuite, div.testcase_info {
+        margin-left: 50px;
+        display: none;
+        }
+
+div.testcase, div.inline {
+        display:block;
+        }
+
+.failed {
+	color: red;
+}
+
+.passed {
+	color: green;
+}
+
+.skipped, .warning {
+	color: orange;
+}
+
+.legend {
+	font-size: small;
+	margin: 50px;
+}
+</style>
+<script type="text/javascript">
+/**
+ * Copyright 2016 Intel Corporation; author Ricardo Neri
+ *
+ * A collection of scripts to manipulate HTML content
+ */
+
+/**
+ * Toggle the style.display setting of an element whose ID is 'content'+id
+ * between 'block' and 'none'. Also, toggle the innerHTML of an element
+ * whose ID is 'control'+id between '[-]' and '[+]'.
+ *
+ * This function is to be used in anchor link with ID control_id to show/
+ * hide an element with ID content_id.
+ *
+ * @param {string} id
+ */
+function toggle(id){
+    var e = document.getElementById('content_'+id);
+    var c = document.getElementById('control_'+id);
+    /* for IE */
+    var style = e.currentStyle;
+
+    if (!style)
+        /* for the rest of the of browsers */
+        style = window.getComputedStyle(e);
+
+    if (style.display == 'none') {
+        e.style.display = 'block';
+        c.innerHTML = "[-]";
+    } else {
+        e.style.display = 'none';
+       c.innerHTML = "[+]"
+    }
+}
+</script>
+</head>
+<body>
+<div class="inline">
+    Linux UEFI Validation Distribution 2.3 <br>
+<br>
+    Date and time of the system : 2020-08-24--10-11-06<br>
+<br>
+    System:  x 4<br>
+<br>
+    Machine ID: 00d03114-0000-0000-0000-dca632b01d9f<br>
+<br>
+    Test results summary:<br>
+<br>
+</div>
+<div id="Arm" class="">
+<a id="control_Arm" href="#" onClick="toggle('Arm');return false;">[+]</a><span class="">Arm</span>
+<div id="content_Arm" class="testsuite">
+
+</div> <!--content_---------------+-----+-----+-----+-----+-----+-----+-->
+</div> <!-----------------+-----+-----+-----+-----+-----+-----+-->
+<div class="inline">
+<br>
+ Ran 1 testsuites and 0 unittests, 0 passes, 0 fails, 0 skipped, 0 warnings.<br>
+</div>
+<div class="legend">
+LEGEND:<br>
+Severity of failures:
+Low:
+<img src="parsed/icon_fail1.png">&emsp;
+Medium:
+<img src="parsed/icon_fail2.png">&emsp;
+High:
+<img src="parsed/icon_fail3.png">&emsp;
+Unknown:
+<img src="parsed/icon_failunk.png">
+</div>
+</body>
+</html>

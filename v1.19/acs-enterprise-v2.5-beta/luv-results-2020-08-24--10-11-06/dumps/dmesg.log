@@ -1,0 +1,389 @@
+<6>[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd083]
+<5>[    0.000000] Linux version 4.18.0-luv (oe-user@oe-host) (gcc version 7.3.0 (GCC)) #1 SMP PREEMPT Mon Aug 24 10:42:13 UTC 2020
+<6>[    0.000000] efi: Getting EFI parameters from FDT:
+<6>[    0.000000] efi:   System Table: 0x00000000373d0018
+<6>[    0.000000] efi:   MemMap Address: 0x00000000339a9018
+<6>[    0.000000] efi:   MemMap Size: 0x00000c00
+<6>[    0.000000] efi:   MemMap Desc. Size: 0x00000030
+<6>[    0.000000] efi:   MemMap Desc. Version: 0x00000001
+<6>[    0.000000] efi: EFI v2.70 by https://github.com/pftf/RPi4
+<6>[    0.000000] efi:  ACPI 2.0=0x33aa0000  SMBIOS=0x37200000  SMBIOS 3.0=0x371e0000  MEMATTR=0x34c1b698  RNG=0x373dcf18 
+<5>[    0.000000] efi: seeding entropy pool
+<6>[    0.000000] efi: Processing EFI memory map:
+<6>[    0.000000] efi:   0x000000000000-0x0000001cffff [Reserved           |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x0000001d0000-0x0000001effff [Runtime Data       |RUN|  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x0000001f0000-0x0000001fffff [Reserved           |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000000200000-0x00000193ffff [Loader Data        |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000001940000-0x000030980fff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000030981000-0x000032040fff [Loader Code        |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000032041000-0x00003358ffff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000033590000-0x00003364ffff [Runtime Data       |RUN|  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000033650000-0x000033653fff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000033654000-0x0000338d4fff [Loader Code        |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x0000338d5000-0x00003392ffff [Reserved           |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000033930000-0x00003397ffff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000033980000-0x00003399ffff [ACPI Reclaim Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x0000339a0000-0x0000339a8fff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x0000339a9000-0x0000339affff [Loader Data        |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x0000339b0000-0x000033a0ffff [ACPI Reclaim Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000033a10000-0x000033a8ffff [Runtime Code       |RUN|  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000033a90000-0x000033aaffff [ACPI Reclaim Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000033ab0000-0x000033b2ffff [Runtime Code       |RUN|  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000033b30000-0x000034af7fff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034af8000-0x000034af9fff [Boot Data          |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034afa000-0x000034afefff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034aff000-0x000034afffff [Boot Data          |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034b00000-0x000034b2afff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034b2b000-0x000034b2bfff [Boot Data          |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034b2c000-0x000034b2ffff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034b30000-0x000034b30fff [Boot Data          |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034b31000-0x000034b92fff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034b93000-0x000034b97fff [Boot Data          |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034b98000-0x000034b99fff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034b9a000-0x000034ba0fff [Boot Data          |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034ba1000-0x000034bb1fff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034bb2000-0x000034bb2fff [Boot Data          |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034bb3000-0x000034bd3fff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034bd4000-0x000034be0fff [Boot Data          |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034be1000-0x000034be9fff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034bea000-0x000034bf3fff [Boot Data          |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034bf4000-0x000034bf5fff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034bf6000-0x000034bf9fff [Boot Data          |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034bfa000-0x000034bfcfff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034bfd000-0x000034c1bfff [Boot Data          |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034c1c000-0x000034c1efff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034c1f000-0x000034c20fff [Boot Data          |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034c21000-0x000034c22fff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034c23000-0x000034c23fff [Boot Data          |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034c24000-0x000034c26fff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034c27000-0x000034c54fff [Boot Data          |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034c55000-0x000034c57fff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000034c58000-0x000036a23fff [Boot Data          |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000036a24000-0x000036bd0fff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000036bd1000-0x000036ffffff [Boot Code          |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000037000000-0x00003718ffff [Runtime Code       |RUN|  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000037190000-0x0000373dffff [Runtime Data       |RUN|  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x0000373e0000-0x0000373fefff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x0000373ff000-0x0000373fffff [Boot Data          |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000037400000-0x00003a4defff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x00003a4df000-0x00003a516fff [Boot Code          |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x00003a517000-0x00003b3fffff [Boot Data          |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000040000000-0x00008b1fffff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x00008b200000-0x00008b3fffff [Loader Data        |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x00008b400000-0x00008b4cffff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x00008b4d0000-0x00009215ffff [Loader Data        |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000092160000-0x000092164fff [Conventional Memory|   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] efi:   0x000092165000-0x0000bfffffff [Loader Data        |   |  |  |  |  |  |  |   |WB|WT|WC|  ]
+<6>[    0.000000] crashkernel reserved: 0x00000000afe00000 - 0x00000000bfe00000 (256 MB)
+<6>[    0.000000] cma: Reserved 512 MiB at 0x0000000060000000
+<6>[    0.000000] ACPI: Early table checksum verification disabled
+<6>[    0.000000] ACPI: RSDP 0x0000000033AA0000 000024 (v02 RPIFDN)
+<6>[    0.000000] ACPI: XSDT 0x0000000033A90000 00005C (v01 RPIFDN RPI4     00000200      01000013)
+<6>[    0.000000] ACPI: FACP 0x00000000339E0000 000114 (v06 RPIFDN RPI4     00000200 EDK2 00000300)
+<6>[    0.000000] ACPI: DSDT 0x0000000033990000 002402 (v05 RPIFDN RPI      00000002 INTL 20180105)
+<6>[    0.000000] ACPI: CSRT 0x0000000033A00000 000169 (v00 RPIFDN RPI4     00000200 EDK2 00000300)
+<6>[    0.000000] ACPI: DBG2 0x00000000339F0000 000061 (v00 RPIFDN RPI4     00000200 EDK2 00000300)
+<6>[    0.000000] ACPI: GTDT 0x00000000339D0000 000068 (v03 RPIFDN RPI4     00000200 EDK2 00000300)
+<6>[    0.000000] ACPI: APIC 0x00000000339C0000 000184 (v05 RPIFDN RPI4     00000200 EDK2 00000300)
+<6>[    0.000000] ACPI: PPTT 0x00000000339B0000 000184 (v02 RPIFDN RPI4     00000200 EDK2 00000300)
+<6>[    0.000000] ACPI: BGRT 0x0000000033980000 000038 (v01 INTEL  EDK2     00000002      01000013)
+<6>[    0.000000] ACPI: NUMA: Failed to initialise from firmware
+<6>[    0.000000] NUMA: Faking a node at [mem 0x0000000000000000-0x00000000bfffffff]
+<6>[    0.000000] NUMA: NODE_DATA [mem 0xbfffe540-0xbfffffff]
+<6>[    0.000000] Zone ranges:
+<6>[    0.000000]   DMA32    [mem 0x0000000000000000-0x00000000bfffffff]
+<6>[    0.000000]   Normal   empty
+<6>[    0.000000] Movable zone start for each node
+<6>[    0.000000] Early memory node ranges
+<6>[    0.000000]   node   0: [mem 0x0000000000000000-0x00000000001fffff]
+<6>[    0.000000]   node   0: [mem 0x0000000000200000-0x000000003358ffff]
+<6>[    0.000000]   node   0: [mem 0x0000000033590000-0x000000003364ffff]
+<6>[    0.000000]   node   0: [mem 0x0000000033650000-0x00000000338cffff]
+<6>[    0.000000]   node   0: [mem 0x00000000338d0000-0x000000003392ffff]
+<6>[    0.000000]   node   0: [mem 0x0000000033930000-0x0000000033a0ffff]
+<6>[    0.000000]   node   0: [mem 0x0000000033a10000-0x0000000033a8ffff]
+<6>[    0.000000]   node   0: [mem 0x0000000033a90000-0x0000000033aaffff]
+<6>[    0.000000]   node   0: [mem 0x0000000033ab0000-0x0000000033b2ffff]
+<6>[    0.000000]   node   0: [mem 0x0000000033b30000-0x0000000036ffffff]
+<6>[    0.000000]   node   0: [mem 0x0000000037000000-0x00000000373dffff]
+<6>[    0.000000]   node   0: [mem 0x00000000373e0000-0x000000003b3fffff]
+<6>[    0.000000]   node   0: [mem 0x0000000040000000-0x00000000bfffffff]
+<6>[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x00000000bfffffff]
+<7>[    0.000000] On node 0 totalpages: 47936
+<7>[    0.000000]   DMA32 zone: 48 pages used for memmap
+<7>[    0.000000]   DMA32 zone: 0 pages reserved
+<7>[    0.000000]   DMA32 zone: 47936 pages, LIFO batch:1
+<6>[    0.000000] psci: probing for conduit method from ACPI.
+<6>[    0.000000] psci: PSCIv1.1 detected in firmware.
+<6>[    0.000000] psci: Using standard PSCI v0.2 function IDs
+<6>[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+<6>[    0.000000] psci: SMC Calling Convention v1.0
+<5>[    0.000000] random: get_random_bytes called from start_kernel+0xb0/0x498 with crng_init=0
+<6>[    0.000000] percpu: Embedded 3 pages/cpu @(____ptrval____) s122392 r8192 d66024 u196608
+<7>[    0.000000] pcpu-alloc: s122392 r8192 d66024 u196608 alloc=3*65536
+<7>[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+<6>[    0.000000] Detected PIPT I-cache on CPU0
+<6>[    0.000000] CPU features: enabling workaround for EL2 vector hardening
+<6>[    0.000000] CPU features: detected: Kernel page table isolation (KPTI)
+<6>[    0.000000] Built 1 zonelists, mobility grouping off.  Total pages: 47888
+<6>[    0.000000] Policy zone: DMA32
+<5>[    0.000000] Kernel command line: Image initrd=\initrd systemd.log_target=null plymouth.ignore-serial-consoles debug crashkernel=512M,high log_buf_len=1M efi=debug acpi=on crashkernel=256M earlycon uefi_debug  luv_netconsole=none luv_storage=none luv_tests=fwts
+<6>[    0.000000] log_buf_len: 1048576 bytes
+<6>[    0.000000] early log buf free: 119100(90%)
+<6>[    0.000000] Memory: 2130752K/3067904K available (12156K kernel code, 2170K rwdata, 5504K rodata, 1920K init, 996K bss, 412864K reserved, 524288K cma-reserved)
+<6>[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+<6>[    0.000000] ftrace: allocating 43979 entries in 11 pages
+<6>[    0.000000] Preemptible hierarchical RCU implementation.
+<6>[    0.000000] 	RCU restricting CPUs from NR_CPUS=512 to nr_cpu_ids=4.
+<6>[    0.000000] 	Tasks RCU enabled.
+<6>[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+<6>[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+<6>[    0.000000] GIC: Using split EOI/Deactivate mode
+<6>[    0.000000] arch_timer: cp15 timer(s) running at 54.00MHz (phys).
+<6>[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0xc743ce346, max_idle_ns: 440795203123 ns
+<6>[    0.000002] sched_clock: 56 bits at 54MHz, resolution 18ns, wraps every 4398046511102ns
+<6>[    0.000074] Console: colour dummy device 80x25
+<6>[    0.000795] console [tty0] enabled
+<6>[    0.000879] ACPI: Core revision 20180531
+<6>[    0.001079] Calibrating delay loop (skipped), value calculated using timer frequency.. 108.00 BogoMIPS (lpj=216000)
+<6>[    0.001093] pid_max: default: 32768 minimum: 301
+<6>[    0.001132] Security Framework initialized
+<6>[    0.002557] Dentry cache hash table entries: 524288 (order: 6, 4194304 bytes)
+<6>[    0.003291] Inode-cache hash table entries: 262144 (order: 5, 2097152 bytes)
+<6>[    0.003333] Mount-cache hash table entries: 8192 (order: 0, 65536 bytes)
+<6>[    0.003362] Mountpoint-cache hash table entries: 8192 (order: 0, 65536 bytes)
+<6>[    0.028108] ASID allocator initialised with 32768 entries
+<6>[    0.036099] Hierarchical SRCU implementation.
+<6>[    0.044208] Remapping and enabling EFI services.
+<6>[    0.044297] efi: memattr: Processing EFI Memory Attributes table:
+<6>[    0.044309] efi: memattr:  0x0000001d0000-0x0000001effff [Runtime Data       |RUN|  |  |XP|  |  |  |   |  |  |  |  ]
+<6>[    0.044322] efi: memattr:  0x000033590000-0x00003364ffff [Runtime Data       |RUN|  |  |XP|  |  |  |   |  |  |  |  ]
+<6>[    0.044333] efi: memattr:  0x000033a10000-0x000033a1ffff [Runtime Code       |RUN|  |  |XP|  |  |  |   |  |  |  |  ]
+<6>[    0.044344] efi: memattr:  0x000033a20000-0x000033a2ffff [Runtime Code       |RUN|  |  |  |  |  |RO|   |  |  |  |  ]
+<6>[    0.044355] efi: memattr:  0x000033a30000-0x000033a5ffff [Runtime Code       |RUN|  |  |XP|  |  |  |   |  |  |  |  ]
+<6>[    0.044365] efi: memattr:  0x000033a60000-0x000033a6ffff [Runtime Code       |RUN|  |  |  |  |  |RO|   |  |  |  |  ]
+<6>[    0.044376] efi: memattr:  0x000033a70000-0x000033a8ffff [Runtime Code       |RUN|  |  |XP|  |  |  |   |  |  |  |  ]
+<6>[    0.044386] efi: memattr:  0x000033ab0000-0x000033abffff [Runtime Code       |RUN|  |  |XP|  |  |  |   |  |  |  |  ]
+<6>[    0.044397] efi: memattr:  0x000033ac0000-0x000033acffff [Runtime Code       |RUN|  |  |  |  |  |RO|   |  |  |  |  ]
+<6>[    0.044407] efi: memattr:  0x000033ad0000-0x000033afffff [Runtime Code       |RUN|  |  |XP|  |  |  |   |  |  |  |  ]
+<6>[    0.044417] efi: memattr:  0x000033b00000-0x000033b0ffff [Runtime Code       |RUN|  |  |  |  |  |RO|   |  |  |  |  ]
+<6>[    0.044428] efi: memattr:  0x000033b10000-0x000033b2ffff [Runtime Code       |RUN|  |  |XP|  |  |  |   |  |  |  |  ]
+<6>[    0.044438] efi: memattr:  0x000037000000-0x00003703ffff [Runtime Code       |RUN|  |  |XP|  |  |  |   |  |  |  |  ]
+<6>[    0.044449] efi: memattr:  0x000037040000-0x0000370bffff [Runtime Code       |RUN|  |  |  |  |  |RO|   |  |  |  |  ]
+<6>[    0.044459] efi: memattr:  0x0000370c0000-0x0000370fffff [Runtime Code       |RUN|  |  |XP|  |  |  |   |  |  |  |  ]
+<6>[    0.044470] efi: memattr:  0x000037100000-0x00003710ffff [Runtime Code       |RUN|  |  |  |  |  |RO|   |  |  |  |  ]
+<6>[    0.044480] efi: memattr:  0x000037110000-0x00003714ffff [Runtime Code       |RUN|  |  |XP|  |  |  |   |  |  |  |  ]
+<6>[    0.044490] efi: memattr:  0x000037150000-0x00003715ffff [Runtime Code       |RUN|  |  |  |  |  |RO|   |  |  |  |  ]
+<6>[    0.044501] efi: memattr:  0x000037160000-0x00003718ffff [Runtime Code       |RUN|  |  |XP|  |  |  |   |  |  |  |  ]
+<6>[    0.044511] efi: memattr:  0x000037190000-0x0000373dffff [Runtime Data       |RUN|  |  |XP|  |  |  |   |  |  |  |  ]
+<6>[    0.060130] smp: Bringing up secondary CPUs ...
+<6>[    0.100253] Detected PIPT I-cache on CPU1
+<6>[    0.100288] CPU1: Booted secondary processor 0x0000000001 [0x410fd083]
+<6>[    0.140273] Detected PIPT I-cache on CPU2
+<6>[    0.140291] CPU2: Booted secondary processor 0x0000000002 [0x410fd083]
+<6>[    0.180325] Detected PIPT I-cache on CPU3
+<6>[    0.180343] CPU3: Booted secondary processor 0x0000000003 [0x410fd083]
+<6>[    0.180390] smp: Brought up 1 node, 4 CPUs
+<6>[    0.180424] SMP: Total of 4 processors activated.
+<6>[    0.180431] CPU features: detected: 32-bit EL0 Support
+<6>[    0.196433] CPU: All CPU(s) started at EL2
+<6>[    0.196448] alternatives: patching kernel code
+<6>[    0.197237] devtmpfs: initialized
+<6>[    0.198242] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+<6>[    0.198304] futex hash table entries: 1024 (order: 0, 65536 bytes)
+<6>[    0.199112] pinctrl core: initialized pinctrl subsystem
+<6>[    0.199819] SMBIOS 3.3.0 present.
+<6>[    0.199851] DMI: Raspberry Pi Foundation Raspberry Pi 4 Model B/Raspberry Pi 4 Model B, BIOS UEFI Firmware v1.19 08/13/2020
+<6>[    0.200446] NET: Registered protocol family 16
+<6>[    0.201727] audit: initializing netlink subsys (disabled)
+<5>[    0.201915] audit: type=2000 audit(0.188:1): state=initialized audit_enabled=0 res=1
+<6>[    0.203320] cpuidle: using governor menu
+<6>[    0.203658] vdso: 2 pages (1 code @ (____ptrval____), 1 data @ (____ptrval____))
+<6>[    0.203673] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+<6>[    0.207564] DMA: preallocated 256 KiB pool for atomic allocations
+<6>[    0.207784] ACPI: bus type PCI registered
+<6>[    0.207800] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+<6>[    0.208213] Serial: AMBA PL011 UART driver
+<6>[    0.221919] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+<6>[    0.221938] HugeTLB registered 512 MiB page size, pre-allocated 0 pages
+<6>[    0.222337] cryptd: max_cpu_qlen set to 1000
+<6>[    0.223041] ACPI: Added _OSI(Module Device)
+<6>[    0.223060] ACPI: Added _OSI(Processor Device)
+<6>[    0.223066] ACPI: Added _OSI(3.0 _SCP Extensions)
+<6>[    0.223073] ACPI: Added _OSI(Processor Aggregator Device)
+<6>[    0.223080] ACPI: Added _OSI(Linux-Dell-Video)
+<6>[    0.224126] ACPI: 1 ACPI AML tables successfully acquired and loaded
+<6>[    0.228629] ACPI: Interpreter enabled
+<6>[    0.228643] ACPI: Using GIC for interrupt routing
+<3>[    0.228688] ACPI: Failed to parse MCFG (-19)
+<6>[    0.235945] BCM2837:00: ttyAMA0 at MMIO 0xfe201000 (irq = 19, base_baud = 0) is a SBSA
+<6>[    0.237775] vgaarb: loaded
+<5>[    0.237943] SCSI subsystem initialized
+<7>[    0.238112] libata version 3.00 loaded.
+<6>[    0.238219] ACPI: bus type USB registered
+<6>[    0.238294] usbcore: registered new interface driver usbfs
+<6>[    0.238324] usbcore: registered new interface driver hub
+<6>[    0.238368] usbcore: registered new device driver usb
+<6>[    0.238639] pps_core: LinuxPPS API ver. 1 registered
+<6>[    0.238651] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+<6>[    0.238673] PTP clock support registered
+<6>[    0.238735] EDAC MC: Ver: 3.0.0
+<6>[    0.239617] Registered efivars operations
+<6>[    0.240521] Advanced Linux Sound Architecture Driver Initialized.
+<6>[    0.241167] clocksource: Switched to clocksource arch_sys_counter
+<5>[    0.267348] VFS: Disk quotas dquot_6.6.0
+<6>[    0.267416] VFS: Dquot-cache hash table entries: 8192 (order 0, 65536 bytes)
+<6>[    0.267638] pnp: PnP ACPI init
+<6>[    0.268139] pnp: PnP ACPI: found 0 devices
+<6>[    0.272236] NET: Registered protocol family 2
+<6>[    0.272572] tcp_listen_portaddr_hash hash table entries: 4096 (order: 0, 65536 bytes)
+<6>[    0.272640] TCP established hash table entries: 32768 (order: 2, 262144 bytes)
+<6>[    0.272797] TCP bind hash table entries: 32768 (order: 3, 524288 bytes)
+<6>[    0.273296] TCP: Hash tables configured (established 32768 bind 32768)
+<6>[    0.273383] UDP hash table entries: 2048 (order: 0, 65536 bytes)
+<6>[    0.273445] UDP-Lite hash table entries: 2048 (order: 0, 65536 bytes)
+<6>[    0.273572] NET: Registered protocol family 1
+<6>[    0.273877] RPC: Registered named UNIX socket transport module.
+<6>[    0.273885] RPC: Registered udp transport module.
+<6>[    0.273891] RPC: Registered tcp transport module.
+<6>[    0.273897] RPC: Registered tcp NFSv4.1 backchannel transport module.
+<7>[    0.273908] PCI: CLS 0 bytes, default 64
+<6>[    0.274073] Unpacking initramfs...
+<6>[    3.272863] Freeing initrd memory: 111040K
+<6>[    3.273221] hw perfevents: enabled with armv8_pmuv3_0 PMU driver, 7 counters available
+<6>[    3.273242] kvm [1]: 8-bit VMID
+<6>[    3.273490] kvm [1]: GICV region size/alignment is unsafe, using trapping (reduced performance)
+<6>[    3.273637] kvm [1]: vgic interrupt IRQ1
+<6>[    3.273721] kvm [1]: Hyp mode initialized successfully
+<5>[    3.275108] Initialise system trusted keyrings
+<6>[    3.275238] workingset: timestamp_bits=44 max_order=16 bucket_order=0
+<6>[    3.279264] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+<5>[    3.279745] NFS: Registering the id_resolver key type
+<5>[    3.279771] Key type id_resolver registered
+<5>[    3.279777] Key type id_legacy registered
+<6>[    3.279788] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+<6>[    3.279892] 9p: Installing v9fs 9p2000 file system support
+<6>[    3.279946] pstore: using deflate compression
+<5>[    3.281898] Key type asymmetric registered
+<5>[    3.281912] Asymmetric key parser 'x509' registered
+<6>[    3.282014] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 245)
+<6>[    3.282027] io scheduler noop registered
+<6>[    3.282032] io scheduler deadline registered
+<6>[    3.282137] io scheduler cfq registered (default)
+<6>[    3.282146] io scheduler mq-deadline registered
+<6>[    3.282152] io scheduler kyber registered
+<4>[    3.286768] EINJ: EINJ table not found.
+<6>[    3.286790] ERST DBG: ERST support is disabled.
+<6>[    3.290457] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+<6>[    3.291992] SuperH (H)SCI(F) driver initialized
+<6>[    3.292140] msm_serial: driver initialized
+<6>[    3.298882] loop: module loaded
+<6>[    3.301010] libphy: Fixed MDIO Bus: probed
+<6>[    3.301371] tun: Universal TUN/TAP device driver, 1.6
+<6>[    3.301866] thunder_xcv, ver 1.0
+<6>[    3.301907] thunder_bgx, ver 1.0
+<6>[    3.301937] nicpf, ver 1.0
+<6>[    3.302109] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+<6>[    3.302118] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+<6>[    3.302151] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+<6>[    3.302159] igb: Copyright (c) 2007-2014 Intel Corporation.
+<6>[    3.302190] igbvf: Intel(R) Gigabit Virtual Function Network Driver - version 2.4.0-k
+<6>[    3.302198] igbvf: Copyright (c) 2009 - 2012 Intel Corporation.
+<6>[    3.302333] sky2: driver version 1.30
+<6>[    3.302723] VFIO - User Level meta-driver version: 0.3
+<6>[    3.303728] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+<6>[    3.303747] ehci-pci: EHCI PCI platform driver
+<6>[    3.303770] ehci-platform: EHCI generic platform driver
+<6>[    3.303818] ehci-orion: EHCI orion driver
+<6>[    3.303850] ehci-exynos: EHCI EXYNOS driver
+<6>[    3.303934] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+<6>[    3.303956] ohci-pci: OHCI PCI platform driver
+<6>[    3.303988] ohci-platform: OHCI generic platform driver
+<6>[    3.304027] ohci-exynos: OHCI EXYNOS driver
+<6>[    3.304216] xhci-hcd PNP0D10:00: xHCI Host Controller
+<6>[    3.304242] xhci-hcd PNP0D10:00: new USB bus registered, assigned bus number 1
+<6>[    3.305671] xhci-hcd PNP0D10:00: hcc params 0x002841eb hci version 0x100 quirks 0x0000000000010010
+<6>[    3.305712] xhci-hcd PNP0D10:00: irq 5, io mem 0x600000000
+<6>[    3.306205] hub 1-0:1.0: USB hub found
+<6>[    3.306263] hub 1-0:1.0: 1 port detected
+<6>[    3.306443] xhci-hcd PNP0D10:00: xHCI Host Controller
+<6>[    3.306456] xhci-hcd PNP0D10:00: new USB bus registered, assigned bus number 2
+<6>[    3.306477] xhci-hcd PNP0D10:00: Host supports USB 3.0  SuperSpeed
+<6>[    3.306545] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+<6>[    3.306776] hub 2-0:1.0: USB hub found
+<6>[    3.306801] hub 2-0:1.0: 4 ports detected
+<6>[    3.307242] usbcore: registered new interface driver usb-storage
+<6>[    3.308584] rtc-efi rtc-efi: rtc core: registered rtc-efi as rtc0
+<6>[    3.308887] i2c /dev entries driver
+<6>[    3.310407] sdhci: Secure Digital Host Controller Interface driver
+<6>[    3.310427] sdhci: Copyright(c) Pierre Ossman
+<6>[    3.310587] Synopsys Designware Multimedia Card Interface Driver
+<6>[    3.310814] sdhci-pltfm: SDHCI platform and OF driver helper
+<6>[    3.311428] ledtrig-cpu: registered to indicate activity on CPUs
+<6>[    3.311758] EFI Variables Facility v0.08 2004-May-17
+<6>[    3.314092] pstore: Registered efi as persistent store backend
+<6>[    3.314711] usbcore: registered new interface driver usbhid
+<6>[    3.314728] usbhid: USB HID core driver
+<6>[    3.316198] gre: GRE over IPv4 demultiplexor driver
+<6>[    3.316222] NET: Registered protocol family 17
+<6>[    3.316273] 9pnet: Installing 9P2000 support
+<5>[    3.316316] Key type dns_resolver registered
+<6>[    3.316860] registered taskstats version 1
+<5>[    3.316874] Loading compiled-in X.509 certificates
+<3>[    3.316983] Unable to create integrity sysfs dir: -19
+<6>[    3.317585] rtc-efi rtc-efi: setting system clock to 2012-08-01 21:13:52 UTC (1343855632)
+<6>[    3.320274] ALSA device list:
+<6>[    3.320284]   No soundcards found.
+<6>[    3.324557] Freeing unused kernel memory: 1920K
+<30>[    3.331548] systemd[1]: System time before build time, advancing clock.
+<6>[    3.345157] NET: Registered protocol family 10
+<6>[    3.345664] Segment Routing with IPv6
+<5>[    3.356066] random: systemd: uninitialized urandom read (16 bytes read)
+<5>[    3.409949] random: systemd: uninitialized urandom read (16 bytes read)
+<5>[    3.411019] random: systemd: uninitialized urandom read (16 bytes read)
+<6>[    3.649211] usb 1-1: new high-speed USB device number 2 using xhci-hcd
+<6>[    3.808854] hub 1-1:1.0: USB hub found
+<6>[    3.809141] hub 1-1:1.0: 4 ports detected
+<6>[    4.105230] usb 1-1.2: new high-speed USB device number 3 using xhci-hcd
+<6>[    4.215252] Bluetooth: Core ver 2.22
+<6>[    4.215339] NET: Registered protocol family 31
+<6>[    4.215347] Bluetooth: HCI device and connection manager initialized
+<6>[    4.215363] Bluetooth: HCI socket layer initialized
+<6>[    4.215372] Bluetooth: L2CAP socket layer initialized
+<6>[    4.215392] Bluetooth: SCO socket layer initialized
+<6>[    4.219180] Bluetooth: HCI UART driver ver 2.3
+<6>[    4.219204] Bluetooth: HCI UART protocol H4 registered
+<6>[    4.219402] Bluetooth: HCI UART protocol LL registered
+<6>[    4.219702] Bluetooth: HCI UART protocol Broadcom registered
+<6>[    4.222826] hub 1-1.2:1.0: USB hub found
+<6>[    4.224306] hub 1-1.2:1.0: 4 ports detected
+<6>[    4.513179] usb 1-1.2.1: new full-speed USB device number 4 using xhci-hcd
+<6>[    4.636088] input: Logitech USB Receiver as /devices/system/container/ACPI0004:00/PNP0D10:00/usb1/1-1/1-1.2/1-1.2.1/1-1.2.1:1.0/0003:046D:C52B.0001/input/input0
+<6>[    4.693634] hid-generic 0003:046D:C52B.0001: input: USB HID v1.11 Keyboard [Logitech USB Receiver] on usb-PNP0D10:00-1.2.1/input0
+<6>[    4.701386] input: Logitech USB Receiver Mouse as /devices/system/container/ACPI0004:00/PNP0D10:00/usb1/1-1/1-1.2/1-1.2.1/1-1.2.1:1.1/0003:046D:C52B.0002/input/input1
+<6>[    4.701584] input: Logitech USB Receiver Consumer Control as /devices/system/container/ACPI0004:00/PNP0D10:00/usb1/1-1/1-1.2/1-1.2.1/1-1.2.1:1.1/0003:046D:C52B.0002/input/input2
+<6>[    4.761328] input: Logitech USB Receiver System Control as /devices/system/container/ACPI0004:00/PNP0D10:00/usb1/1-1/1-1.2/1-1.2.1/1-1.2.1:1.1/0003:046D:C52B.0002/input/input3
+<6>[    4.761434] hid-generic 0003:046D:C52B.0002: input: USB HID v1.11 Mouse [Logitech USB Receiver] on usb-PNP0D10:00-1.2.1/input1
+<3>[    4.767458] hid-generic 0003:046D:C52B.0003: device has no listeners, quitting
+<6>[    4.845184] usb 1-1.2.2: new high-speed USB device number 5 using xhci-hcd
+<6>[    4.981281] usb-storage 1-1.2.2:1.0: USB Mass Storage device detected
+<6>[    4.981518] scsi host0: usb-storage 1-1.2.2:1.0
+<6>[    5.061179] usb 1-1.2.4: new high-speed USB device number 6 using xhci-hcd
+<6>[    5.170303] usbcore: registered new interface driver r8152
+<6>[    5.173029] usbcore: registered new interface driver cdc_ether
+<6>[    5.249474] usb 1-1.2.4: reset high-speed USB device number 6 using xhci-hcd
+<5>[    5.352222] random: fast init done
+<6>[    5.386284] r8152 1-1.2.4:1.0 eth0: v1.09.9
+<6>[    5.405179] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+<5>[    6.290620] scsi 0:0:0:0: Direct-Access     Lexar    USB Flash Drive  1100 PQ: 0 ANSI: 6
+<5>[    6.291990] sd 0:0:0:0: [sda] 62537728 512-byte logical blocks: (32.0 GB/29.8 GiB)
+<5>[    6.292742] sd 0:0:0:0: [sda] Write Protect is off
+<7>[    6.292758] sd 0:0:0:0: [sda] Mode Sense: 43 00 00 00
+<5>[    6.293438] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+<6>[    6.307941]  sda: sda1 sda2
+<5>[    6.311285] sd 0:0:0:0: [sda] Attached SCSI removable disk
+<6>[    8.895968] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+<6>[    8.896478] r8152 1-1.2.4:1.0 eth0: carrier on
+<4>[   15.013923] init SBSA Driver 
+<5>[   17.137126] random: crng init done
+<5>[   17.137147] random: 7 urandom warning(s) missed due to ratelimiting

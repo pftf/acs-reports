@@ -1,0 +1,26 @@
+
+ ************ SBSA Architecture Compliance Suite ********* 
+                        Version 2.4  
+
+ Starting tests for level  4 (Print level is  3)
+
+ Gathering system information.... 
+ PE_INFO: Number of PE detected       :    4 
+ PCIE_INFO: Number of ECAM regions    :    0 
+ Peripheral: Num of USB controllers   :    0 
+ Peripheral: Num of SATA controllers  :    0 
+ Peripheral: Num of UART controllers  :    0 
+ DMA_INFO: Number of DMA CTRL in PCIe :    0 
+ SMMU_INFO: Number of SMMU CTRL       :    0 
+
+      *** Starting PCIe tests ***  
+ 401 : Check ECAM Presence               
+       No ECAMs discovered              : Result:  -SKIPPED- 1 
+
+     *** Skipping remaining PCIE tests *** 
+
+     ------------------------------------------------------------
+      Total Tests Run =  1, Tests Passed =  0, Tests Failed =  0 
+     ------------------------------------------------------------
+                    *** SBSA tests complete *** 
+

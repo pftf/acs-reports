@@ -1,0 +1,114 @@
+ PE_INFO: Number of PE detected       :    4 
+ GIC_INFO: Number of GICD             :    1 
+ GIC_INFO: Number of ITS              :    0 
+ TIMER_INFO: Number of system timers  :    0 
+ WATCHDOG_INFO: Number of Watchdogs   :    0 
+ PCIE_INFO: Number of ECAM regions    :    0 
+ SMMU_INFO: Number of SMMU CTRL       :    0 
+ Peripheral: Num of USB controllers   :    1 
+ Peripheral: Num of SATA controllers  :    0 
+ Peripheral: Num of UART controllers  :    0 
+   1 : Check for number of PE            : Result:  PASS 
+   2 : Check for SIMD extensions         : Result:  PASS 
+   3 : Check for 16-bit ASID support     : Result:  PASS 
+   4 : Check MMU Granule sizes           : Result:  PASS 
+   5 : Check Cache Architecture          : Result:  PASS 
+   6 : Check HW Coherence support        : Result:  PASS 
+   7 : Check Cryptographic extensions    
+       Failed on PE -    0 for Level=  4 : Result:  --FAIL-- 1 
+   8 : Check Little Endian support       : Result:  PASS 
+   9 : Check EL2 implementation          : Result:  PASS 
+  10 : Check AARCH64 implementation      : Result:  PASS 
+  11 : Check PMU Overflow signal         
+       Failed on PE -    0 for Level=  4 : Result:  --FAIL-- 1 
+  12 : Check number of PMU counters      : Result:  PASS 
+  13 : Check Synchronous Watchpoints     : Result:  PASS 
+  14 : Check number of Breakpoints       : Result:  PASS 
+  15 : Check Arch symmetry across PE     : Result:  PASS 
+  16 : Check EL3 implementation          : Result:  PASS 
+  17 : Check CRC32 instruction support   : Result:  PASS 
+  18 : Check for PMBIRQ signal           
+       SPE not supported on this PE      : Result:  -SKIPPED- 1 
+  19 : Check for RAS extension           
+       Failed on PE -    0 for Level=  4 : Result:  --FAIL-- 1 
+  20 : Check for 16-Bit VMID             
+       Failed on PE -    0 for Level=  4 : Result:  --FAIL-- 1 
+  21 : Check for Virtual host extensions 
+       Failed on PE -    0 for Level=  4 : Result:  --FAIL-- 1 
+  22 : Check for pointer signing         : Result:  -SKIPPED- 1 
+
+      *** One or more PE tests have failed... *** 
+ 101 : Check GIC version                 
+       GIC version is   2                
+       Failed on PE -    0 for Level=  4 : Result:  --FAIL-- 2 
+ 102 : If PCIe, then GIC implements ITS  : Result:  PASS 
+ 103 : GIC number of Security states(2)  : Result:  -SKIPPED- 1 
+ 104 : GIC Maintenance Interrupt         : Result:  -SKIPPED- 1 
+
+      One or more GIC tests failed. Check Log 
+ 201 : Check Counter Frequency           : Result:  PASS 
+ 202 : Check EL0-Phy timer interrupt     : Result:  PASS 
+ 203 : Check EL0-Virtual timer interrupt : Result:  PASS 
+ 204 : Check EL2-phy timer interrupt     : Result:  PASS 
+ 205 : Check EL2-Virtual timer interrupt 
+       v8.1 VHE not supported on this PE : Result:  -SKIPPED- 1 
+ 206 : SYS Timer if PE Timer not ON      
+       PE Timers are not always-on.       
+       Failed on PE -    0 for Level=  4 : Result:  --FAIL-- 1 
+ 207 : CNTCTLBase & CNTBaseN access      
+       No System timers are defined      : Result:  -SKIPPED- 1 
+
+     *** Skipping remaining System timer tests *** 
+
+      *** One or more tests have Failed/Skipped.*** 
+ 301 : Check NS Watchdog Accessibility   
+       No Watchdogs reported          0  
+       Failed on PE -    0 for Level=  4 : Result:  --FAIL-- 1 
+ 302 : Check Watchdog WS0 interrupt      
+       No Watchdogs reported          0  
+       Failed on PE -    0 for Level=  4 : Result:  --FAIL-- 1 
+
+      ***One or more tests have failed... *** 
+ 401 : Check ECAM Presence               
+       No ECAMs discovered              : Result:  -SKIPPED- 1 
+
+     *** Skipping remaining PCIE tests *** 
+       TEST Wakeup from Power Semantic B  
+ 501 : Wake from EL0 PHY Timer Interrupt : Result:  PASS 
+ 502 : Wake from EL0 VIRT Timer Interrupt: Result:  PASS 
+ 503 : Wake from EL2 PHY Timer Interrupt : Result:  PASS 
+ 504 : Wake from Watchdog WS0 Interrupt  
+       No watchdog implemented           : Result:  -SKIPPED- 1 
+ 505 : Wake from System Timer Interrupt  
+       No system timers implemented      : Result:  -SKIPPED- 1 
+ 601 : Check USB CTRL Interface via PCIe 
+    Read PCIe_CFG: ECAM Base is zero 
+       WARN: USB CTRL ECAM access failed 0x0  
+       Re-checking USB CTRL using PciIo protocol       : Result:  PASS 
+ 602 : Check SATA CTRL Interface via PCIe: Result:  -SKIPPED- 1 
+ 603 : Check SBSA UART register offsets  
+        No UART defined by Platform      : Result:  -SKIPPED- 1 
+ 605 : Memory Access to Un-Populated addr
+      Memory access check fails at address = 0x3B400000 
+       Failed on PE -    0 for Level=  4 : Result:  --FAIL-- 1 
+
+    One or more Peripheral tests have failed...
+ 701 : Check 64KB Granularity support    
+       No SMMU Controllers are discovered : Result:  -SKIPPED- 1 
+ 702 : All SMMUs have same Arch Revision 
+       No SMMU Controllers are discovered : Result:  -SKIPPED- 1 
+ 703 : SMMU Compatibility Check          
+       No SMMU Controllers are discovered : Result:  -SKIPPED- 1 
+ 704 : If PCIe, Check Stall model        
+       PCIe Subsystem not  discovered   : Result:  -SKIPPED- 1 
+ 705 : SMMUv2 unique intr per ctxt bank  
+       No SMMU Controllers are discovered : Result:  -SKIPPED- 3 
+ 706 : Unique stream id for each req id   
+      No Root Complex discovered : Result:  -SKIPPED- 3 
+
+      One or more SMMU tests have failed...  
+
+       No ECAMs discovered              
+     ------------------------------------------------------- 
+     Total Tests run  =   51;  Tests Passed  =   24  Tests Failed =   10
+     --------------------------------------------------------- 
